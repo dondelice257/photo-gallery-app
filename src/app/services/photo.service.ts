@@ -120,7 +120,6 @@ private async savePicture(photo: Photo) {
     if (!this.platform.is('hybrid')) {
       // Display the photo by reading into base64 format
       for (let photo of this.photos) {
-        // Read each saved photo's data from the Filesystem
         const readFile = await Filesystem.readFile({
             path: photo.filepath,
             directory: Directory.Data
