@@ -72,7 +72,6 @@ private async savePicture(photo: Photo) {
   });
 
   if (this.platform.is('hybrid')) {
-    // Display the new image by rewriting the 'file://' path to HTTP
     // Details: https://ionicframework.com/docs/building/webview#file-protocol
     return {
       filepath: savedFile.uri,
