@@ -25,7 +25,7 @@ export class PhotoService {
   private async readAsBase64(photo: Photo) {
     // "hybrid" will detect Cordova or Capacitor
     if (this.platform.is('hybrid')) {
-      // Read the file into base64 format
+      Read the file into base64 format
       const file = await Filesystem.readFile({
         path: photo.path!
       });
