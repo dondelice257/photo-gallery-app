@@ -17,8 +17,10 @@ export class Tab2Page {
 
 constructor(public photoService: PhotoService) { }
 
+//add the photo service
 addPhotoToGallery() {
   this.photoService.addNewToGallery();
+  
 }
 
 }

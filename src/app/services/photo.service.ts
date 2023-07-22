@@ -25,7 +25,7 @@ export class PhotoService {
   private async readAsBase64(photo: Photo) {
     // "hybrid" will detect Cordova or Capacitor
     if (this.platform.is('hybrid')) {
-      Read the file into base64 format
+      // Read the file into base64 format
       const file = await Filesystem.readFile({
         path: photo.path!
       });
@@ -58,6 +58,7 @@ export class PhotoService {
     reader.readAsDataURL(blob);
   });
 
+// Save picture to file on device
 private async savePicture(photo: Photo) {
   // Convert photo to base64 format, required by Filesystem API to save
   const base64Data = await this.readAsBase64(photo);
@@ -71,6 +72,7 @@ private async savePicture(photo: Photo) {
   });
 
   if (this.platform.is('hybrid')) {
+    // Display the new image by rewriting the 'file://' path to HTTP
     // Details: https://ionicframework.com/docs/building/webview#file-protocol
     return {
       filepath: savedFile.uri,
@@ -87,6 +89,7 @@ private async savePicture(photo: Photo) {
   }
 }
   public async addNewToGallery() {
+    // Take a photo
     const capturedPhoto = await Camera.getPhoto({
       resultType: CameraResultType.Uri,
       source: CameraSource.Camera,
@@ -118,6 +121,7 @@ private async savePicture(photo: Photo) {
     if (!this.platform.is('hybrid')) {
       // Display the photo by reading into base64 format
       for (let photo of this.photos) {
+        // Read each saved photo's data from the Filesystem
         const readFile = await Filesystem.readFile({
             path: photo.filepath,
             directory: Directory.Data
