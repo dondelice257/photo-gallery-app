@@ -58,7 +58,6 @@ export class PhotoService {
     reader.readAsDataURL(blob);
   });
 
-// Save picture to file on device
 private async savePicture(photo: Photo) {
   // Convert photo to base64 format, required by Filesystem API to save
   const base64Data = await this.readAsBase64(photo);
