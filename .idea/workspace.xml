@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7553a5d6-5c6c-4a88-8b82-6648bac35e44" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/.run/hhhhhhh.run.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capacitor.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capacitor.config.ts" beforeDir="false"  />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
